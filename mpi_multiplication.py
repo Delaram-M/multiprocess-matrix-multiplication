@@ -19,7 +19,7 @@ if rank == 0:
     column1 = [matrix2[i][0] for i in range(2)]
     column2 = [matrix2[i][1] for i in range(2)]
 
-    # send rows and columns to other threads using message passing
+    # send rows and columns to other processes using message passing
     comm.send(row1, dest=1)
     comm.send(column1, dest=1)
     comm.send(row1, dest=2)
@@ -29,7 +29,7 @@ if rank == 0:
     comm.send(row2, dest=4)
     comm.send(column2, dest=4)
 
-    # receive each element from other threads
+    # receive each element from other processes
     element11 = comm.recv(source=1)
     element12 = comm.recv(source=2)
     element21 = comm.recv(source=3)
