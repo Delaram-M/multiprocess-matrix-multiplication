@@ -1,10 +1,15 @@
-# Instructions
+# Multi-process Matrix Multiplication
 
-need to be installed:
+This program multiplies two specific 2*2 matrices using the MPI library.
+
+# Instructions
+You first need to install:
 - MPI application
 - mpi4py python module
 
-to execute the program:
-1. open terminal.
-2. navigate to the directory of the script.
-3. execute command: ``` mpiexec -n 5 python mpi_multiplication.py ```
+To execute the program:
+1. Open a terminal.
+2. Navigate to the directory of the script.
+3. Execute command: ``` mpiexec -n 5 python mpi_multiplication.py ```.
+
+This will run the program with 5 processors.
