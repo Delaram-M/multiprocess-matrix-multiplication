@@ -3,9 +3,7 @@
 This program multiplies two specific 2*2 matrices using mpi4py.
 
 # Instructions
-You first need to install:
-- MPI application
-- mpi4py python module
+You first need to install MPI and mpi4py.
 
 To execute the program:
 1. Open a terminal.
