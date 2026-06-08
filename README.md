@@ -1,6 +1,7 @@
 # Multi-process Matrix Multiplication
 
-This program gets two 2*2 matrices as input, multiplies them using mpi4py, and outputs the result.
+This program gets two 2*2 matrices as input, multiplies them using multiple processors, and outputs the result.
+This program uses mpi4py, which provides Message Passing Interface (MPI) bindings for Python.
 
 # Instructions
 You first need to install MPI and mpi4py.
