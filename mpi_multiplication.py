@@ -9,13 +9,13 @@ rank = comm.Get_rank()
 
 if rank == 0:
     #get input matrices and perform multiplication using message passing
-    print('Enter matrix 1 elements as follows: [first, second], [third, fourth]')
+    print('Enter matrix 1 elements as follows: [[first, second], [third, fourth]]')
     first = int(input('first: '))
     second = int(input('second: '))
     third = int(input('third: '))
     fourth = int(input('fourth: '))
     matrix1 = [[first, second], [third, fourth]]
-    print('Enter matrix 2 elements as follows: [first, second], [third, fourth]')
+    print('Enter matrix 2 elements as follows: [[first, second], [third, fourth]]')
     first = int(input('first: '))
     second = int(input('second: '))
     third = int(input('third: '))
