@@ -8,10 +8,21 @@ size = comm.Get_size()
 rank = comm.Get_rank()
 
 if rank == 0:
-    matrix1 = [[1, 2],
-               [3, 4]]
-    matrix2 = [[1, 3],
-               [2, 4]]
+    #get input matrices and perform multiplication using message passing
+    print('Enter matrix 1 elements as follows: [first, second], [third, fourth]')
+    first = int(input('first: '))
+    second = int(input('second: '))
+    third = int(input('third: '))
+    fourth = int(input('fourth: '))
+    matrix1 = [[first, second], [third, fourth]]
+    print('Enter matrix 2 elements as follows: [first, second], [third, fourth]')
+    first = int(input('first: '))
+    second = int(input('second: '))
+    third = int(input('third: '))
+    fourth = int(input('fourth: '))
+    matrix2 = [[first, second], [third, fourth]]
+    print('matrix 1: \n', matrix1)
+    print('matrix 2: \n', matrix2)
 
     # extract rows and columns
     row1 = matrix1[0]
@@ -38,7 +49,7 @@ if rank == 0:
     # print the result
     multiplied = [[element11, element12],
                   [element21, element22]]
-    print(multiplied)
+    print('multiplication output: \n', multiplied)
 
 if rank != 0:
     # receive assigned row and column and return the sum of multiplication to rank 0 using message passing
